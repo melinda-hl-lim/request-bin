@@ -4,7 +4,7 @@
   "description": "Implied Schema of Request Bin",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "psql -U melinda < db/migration.sql && node index.js",
     "dev": "nodemon index.js",
     "build": "rm -rf build && cd front-end && npm run build && mv build ../build",
     "test": "echo \"Error: no test specified\" && exit 1"
